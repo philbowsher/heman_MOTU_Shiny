@@ -1,5 +1,5 @@
 ---
-title: "Shera vs Catra"
+title: "Shera vs Catra v"
 output: html_notebook
 ---
 
@@ -16,55 +16,7 @@ library(readxl)
 
 
 
-This is my import procedure
-
-
-```{r}
-
-
-url <- "https://github.com/philbowsher/Foundation-of-the-R-Workflow-workshop-2019-09-06/raw/master/Examples/data/ad_treatment.xlsx"
-destfile <- "ad_treatment.xlsx"
-curl::curl_download(url, destfile)
-ad_treatment <- read_excel(destfile)
-
-ad_treatment
-
-```
-
-
 This is my awesome data Viz of survey results for heman and shera
-
-```{r}
-ad_treatmentnew <- ad_treatment %>%
- filter(age >= 81L & age <= 85L) %>%
- filter(mmse >= 15 & mmse <= 
-    28.8) 
-```
-
-
-```{r}
- ad_treatment %>%
- filter(age >= 81L & age <= 85L) %>%
- filter(mmse >= 15 & mmse <= 
-    28.8) %>%
- ggplot() +
- aes(x = age, group = health_status) +
- geom_histogram(bins = 30L, fill = "#0c4c8a") +
- theme_minimal()
-
-
-```
-
-```{r}
-
-ad_treatmentnew %>%
- ggplot() +
- aes(x = age, group = health_status) +
- geom_histogram(bins = 30L, fill = "#0c4c8a") +
- theme_minimal()
-
-```
-
 
 
 
