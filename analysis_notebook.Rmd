@@ -35,8 +35,15 @@ ad_treatment
 This is my awesome data Viz of survey results for heman and shera
 
 ```{r}
+ad_treatmentnew <- ad_treatment %>%
+ filter(age >= 81L & age <= 85L) %>%
+ filter(mmse >= 15 & mmse <= 
+    28.8) 
+```
 
-ad_treatment %>%
+
+```{r}
+ ad_treatment %>%
  filter(age >= 81L & age <= 85L) %>%
  filter(mmse >= 15 & mmse <= 
     28.8) %>%
@@ -47,6 +54,19 @@ ad_treatment %>%
 
 
 ```
+
+```{r}
+
+ad_treatmentnew %>%
+ ggplot() +
+ aes(x = age, group = health_status) +
+ geom_histogram(bins = 30L, fill = "#0c4c8a") +
+ theme_minimal()
+
+```
+
+
+
 
 ```{r}
 
