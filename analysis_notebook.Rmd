@@ -1,5 +1,5 @@
 ---
-title: "R Notebook"
+title: "Shera vs Catra"
 output: html_notebook
 ---
 
@@ -37,7 +37,7 @@ This is my awesome data Viz of survey results for heman and shera
 ```{r}
 
 ad_treatment %>%
- filter(age >= 80L & age <= 85L) %>%
+ filter(age >= 81L & age <= 85L) %>%
  filter(mmse >= 15 & mmse <= 
     28.8) %>%
  ggplot() +
